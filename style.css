@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.container {
+    text-align: center;
+}
+
+#text_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    z-index: 5;
+}
+
+.item {
+    color: white;
+    padding: 5px;
+    font-weight: 900;
+    font-size: 40px;
+    animation: slideLeft 1s 1;
+
+    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+.error_item {
+    color: yellow;
+    padding: 5px;
+    font-weight: 900;
+    font-size: 50px;
+
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+input[type="text"] {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color:black;
+    text-align: center;
+    font-weight: 900; 
+    font-size: 20px;
+    color: white;
+    z-index: 10;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus::placeholder{
+    color:transparent;
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:250px;
+    height:250px;
+    border-radius:125px;
+    border: 1px solid white;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.anim1 {
+    animation: drift1 1s linear infinite;
+    animation-delay: 4s;
+}
+
+.anim2 {
+    animation: drift2 2s linear infinite;
+    animation-delay: 3s;
+}
+
+.anim3 {
+    animation: drift3 3s linear infinite;
+    animation-delay: 2s;
+}
+
+.anim4 {
+    animation: drift4 4s linear infinite;
+    animation-delay: 1s;
+}
+
+.anim5 {
+    animation: drift5 5s linear infinite;
+}
+
+@keyframes drift1 {
+    to {
+        transform: scale(2,2) translate(-25%, -25%);
+        opacity: 0;
+    }
+}
+
+@keyframes drift2 {
+    to {
+        transform: scale(3,3) translate(-16%, -16%);
+        opacity: 0;
+    }
+}
+
+@keyframes drift3 {
+    to {
+        transform: scale(4,4) translate(-12%, -12%);
+        opacity: 0;
+    }
+}
+
+@keyframes drift4 {
+    to {
+        transform: scale(5,5) translate(-10%, -10%);
+        opacity: 0;
+    }
+}
+
+@keyframes drift5 {
+    to {
+        transform: scale(6,6) translate(-8%, -8%);
+        opacity: 0;
+    }
+}
